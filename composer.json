@@ -1,5 +1,5 @@
 {
-  "name": "ldesignmedia/laravel-translations-db",
+  "name": "ldesignmedia/ldesign_laravel_translation",
   "description": "A database translations implementation for Laravel 5.",
   "license": "GPL2",
   "keywords": [
