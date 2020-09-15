@@ -8,12 +8,8 @@
     "localization",
     "database"
   ],
-  "authors": [
-    {
-      "name": "Paul Olthof",
-      "email": "LdesignMedia@gmail.com"
-    }
-  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
     "php": ">=7.2",
     "illuminate/translation": "7.28.*",
