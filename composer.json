@@ -12,9 +12,9 @@
   "prefer-stable": true,
   "require": {
     "php": ">=7.2",
-    "illuminate/translation": "7.28.*",
-    "illuminate/database": "7.28.*",
-    "illuminate/cache": "7.28.*",
+    "illuminate/translation": "6.*",
+    "illuminate/database": "6.*",
+    "illuminate/cache": "6.*",
     "stichoza/google-translate-php": "4.1.*"
   },
   "autoload": {
