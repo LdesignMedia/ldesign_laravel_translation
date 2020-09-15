@@ -1,4 +1,4 @@
-<?php namespace LdesignMedia\Translation;;
+<?php namespace LdesignMedia\Translation;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Translation\LoaderInterface;
