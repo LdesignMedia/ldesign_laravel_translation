@@ -1,7 +1,7 @@
-<?php namespace Hpolthof\Translation\Controllers;
+<?php namespace LdesignMedia\Translation\Controllers;
 
-use Hpolthof\Translation\ServiceProvider;
-use Hpolthof\Translation\TranslationException;
+use LdesignMedia\Translation\ServiceProvider;
+use LdesignMedia\Translation\TranslationException;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Stichoza\GoogleTranslate\TranslateClient;

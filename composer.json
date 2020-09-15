@@ -1,5 +1,5 @@
 {
-  "name": "hpolthof/laravel-translations-db",
+  "name": "LdesignMedia/laravel-translations-db",
   "description": "A database translations implementation for Laravel 5.",
   "license": "GPL2",
   "keywords": [
@@ -11,7 +11,7 @@
   "authors": [
     {
       "name": "Paul Olthof",
-      "email": "hpolthof@gmail.com"
+      "email": "LdesignMedia@gmail.com"
     }
   ],
   "require": {
@@ -23,13 +23,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Hpolthof\\Translation\\": "src"
+      "LdesignMedia\\Translation\\": "src"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Hpolthof\\Translation\\ServiceProvider"
+        "LdesignMedia\\Translation\\ServiceProvider"
       ]
     }
   }

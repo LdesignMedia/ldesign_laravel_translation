@@ -1,4 +1,4 @@
-<?php namespace Hpolthof\Translation;
+<?php namespace LdesignMedia\Translation;
 
 use Illuminate\Database\Query\Builder;
 use Illuminate\Translation\FileLoader;
@@ -13,8 +13,8 @@ class ServiceProvider extends \Illuminate\Translation\TranslationServiceProvider
 	protected $defer = false;
 
 	protected $commands = [
-		'Hpolthof\Translation\Console\Commands\DumpCommand',
-		'Hpolthof\Translation\Console\Commands\FetchCommand',
+		'LdesignMedia\Translation\Console\Commands\DumpCommand',
+		'LdesignMedia\Translation\Console\Commands\FetchCommand',
 	];
 
 	/**
@@ -67,7 +67,7 @@ class ServiceProvider extends \Illuminate\Translation\TranslationServiceProvider
 		// Only in debug mode the translations interface should be available.
 		if($this->app['config']->get('app.debug') && $this->app['config']->get('translation-db.webinterface')) {
 			$routeConfig = [
-				'namespace' => 'Hpolthof\Translation\Controllers',
+				'namespace' => 'LdesignMedia\Translation\Controllers',
 				'prefix' => $this->app['config']->get('translation-db.route_prefix'),
 			];
 			$this->app['router']->group($routeConfig, function($router) {

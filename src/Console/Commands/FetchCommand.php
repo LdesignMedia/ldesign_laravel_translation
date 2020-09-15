@@ -1,4 +1,4 @@
-<?php namespace Hpolthof\Translation\Console\Commands;
+<?php namespace LdesignMedia\Translation\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Query\Builder;
