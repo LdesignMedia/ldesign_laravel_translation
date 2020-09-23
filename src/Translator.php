@@ -1,5 +1,6 @@
 <?php namespace LdesignMedia\Translation;
 
+use Cassandra\Collection;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Translation\Loader;
 
@@ -133,12 +134,10 @@ class Translator extends \Illuminate\Translation\Translator
      *
      * @return array
      */
-    protected function loadFromDatabase($namespace, $group, $locale) : array {
+    protected function loadFromDatabase($namespace, $group, $locale)  {
         $lines = $this->database->load($locale, $group, $namespace);
-
         if (count($lines) == 0 && \Config::get('translation-db.file_fallback', false)) {
             $lines = $this->loader->load($locale, $group, $namespace);
-
             return $lines;
         }
 
