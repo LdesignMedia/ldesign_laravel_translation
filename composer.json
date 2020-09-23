@@ -12,6 +12,7 @@
   "prefer-stable": true,
   "require": {
     "php": ">=7.2",
+    "laravel/framework": "6.*",
     "illuminate/translation": "6.*",
     "illuminate/database": "6.*",
     "illuminate/cache": "6.*",

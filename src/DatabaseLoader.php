@@ -1,11 +1,16 @@
 <?php namespace LdesignMedia\Translation;
 
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Translation\LoaderInterface;
+use Illuminate\Contracts\Translation\Loader;
 
-class DatabaseLoader implements LoaderInterface {
+/**
+ * Class DatabaseLoader
+ *
+ * @package LdesignMedia\Translation
+ */
+class DatabaseLoader implements Loader {
 
-    protected $_app = null;
+    protected $_app;
 
     public function __construct(Application $app)
     {
@@ -39,7 +44,9 @@ class DatabaseLoader implements LoaderInterface {
      * @param  string  $hint
      * @return void
      */
-    public function addNamespace($namespace, $hint) {}
+    public function addNamespace($namespace, $hint) {
+
+    }
 
     /**
      * Adds a new translation to the database or
@@ -78,10 +85,16 @@ class DatabaseLoader implements LoaderInterface {
                 'created_at' => date_create(),
             ]);
             \DB::table('translations')->insert($data);
-        } else {
-            if($this->_app['config']->get('translation-db.update_viewed_at')) {
-                \DB::table('translations')->where('id', $item->id)->update($data);
-            }
+        } else if($this->_app['config']->get('translation-db.update_viewed_at')) {
+            \DB::table('translations')->where('id', $item->id)->update($data);
         }
+    }
+
+    public function addJsonPath($path) {
+        // TODO: Implement addJsonPath() method.
+    }
+
+    public function namespaces() {
+        // TODO: Implement namespaces() method.
     }
 }
